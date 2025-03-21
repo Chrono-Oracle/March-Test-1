@@ -630,6 +630,10 @@ video {
   align-content: space-between;
 }
 
+.justify-center {
+  justify-content: center;
+}
+
 .justify-between {
   justify-content: space-between;
 }
@@ -656,6 +660,10 @@ video {
 
 .gap-y-\[2\.5rem\] {
   row-gap: 2.5rem;
+}
+
+.gap-y-\[2\.7rem\] {
+  row-gap: 2.7rem;
 }
 
 .bg-\[\] {
