@@ -1,0 +1,76 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding-bottom: .9rem;
+    background: transparent;
+    transition: background 0.5s ease-in-out;
+    z-index: 1000;
+}
+
+#navbar { /* Adjust as needed */
+    transition: width 0.3s ease-in-out;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+#navbar.expanded {
+    display: grid;
+    justify-content: center;
+    width: 190px; /* Adjust to the desired expanded width */
+}
+
+.nav-item a span {
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+#navbar.expanded .nav-item a span {
+    opacity: 1;
+}
+
+.mobile-menu {
+    transform: translateX(-100%);
+    transition: transform 0.4s ease-in-out;
+}
+
+.mobile-menu.active {
+    transform: translateX(0);
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 900;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+
+/*Hero Section*/
+#hero-image {
+    transition: opacity 0.5s ease-in-out;
+    opacity: 1;
+  }
+  
+  #hero-image.fade-out {
+    opacity: 0;
+  }

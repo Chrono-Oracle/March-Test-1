@@ -8,78 +8,240 @@
     <link rel="stylesheet" href="/dist/output.css">
     <link rel="stylesheet" href="../styles/main.css">
 </head>
-<body>
+<body class="bg-[#0D0D0D]">
 
     <!--=================Header=================-->
     <header>
-        <nav id="navbar" class="bg-[#11172D] text-white grid content-between h-[100vh] fixed z-10 p-5">
-            <div class="grid justify-center">
-                <img src="../images/LogoB.png" alt="">
+        <nav  class="">
+            <!--
+            <div class="flex">
+                <img id="full-logo" src="../images/Logo.png" alt="">
+                <img id="short-logo" src="../images/LogoB.png" alt="">
             </div>
-            <ul class="w-full grid gap-y-[2.7rem]">
-                <li>
-                    <a href="#" class="flex gap-3">
-                        <img class="w-[1.8rem]" src="../images/home.png" alt="">
-                        <span>Home</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#" class="flex gap-3">
-                        <img class="w-[1.8rem]" src="../images/diagram.png" alt="">
-                        <span>Trending</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#" class="flex gap-3">
-                        <img class="w-[1.8rem]" src="../images/folder-2.png" alt="">
-                        <span>Categories</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#" class="flex gap-3">
-                        <img class="w-[1.8rem]" src="../images/clock.png" alt="">
-                        <span>Top Release</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#" class="flex gap-3">
-                        <img class="w-[1.8rem]" src="../images/archive-minus.png" alt="">
-                        <span>Watchlist</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#" class="flex gap-3">
-                        <img class="w-[1.8rem]" src="../images/star.png" alt="">
-                        <span>Favorites</span>
-                    </a>
-                </li>
-            </ul>
+            -->
 
-            <div>
-                <ul class="grid gap-5">
+            <!--Desktop Menu-->
+            <div id="navbar" class="bg-[#11172D] hidden text-white lg:grid content-between h-[100vh] w-[55px] lg:w-[72px] fixed top-0 z-10 p-5">
+                <ul class="w-full hidden lg:grid md:gap-y-[3rem] lg:gap-y-[4rem] lg:items-center mt-5">
+                    <li class="nav-item">
+                        <a href="#" class="flex items-center gap-3 lg:gap-3">
+                            <img class="w-[1rem] lg:w-[1.5rem]" src="../images/home.png" alt="">
+                            <span>Home</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="flex items-center gap-3 lg:gap-3">
+                            <img class="w-[1rem] lg:w-[1.5rem]" src="../images/diagram.png" alt="">
+                            <span>Trending</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="flex items-center gap-3 lg:gap-3">
+                            <img class="w-[1rem] lg:w-[1.5rem]" src="../images/folder-2.png" alt="">
+                            <span>Categories</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="flex items-center gap-3 lg:gap-3">
+                            <img class="w-[1rem] lg:w-[1.5rem]" src="../images/clock.png" alt="">
+                            <span>Top Release</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="flex items-center gap-3 lg:gap-3">
+                            <img class="w-[1rem] lg:w-[1.5rem]" src="../images/archive-minus.png" alt="">
+                            <span>Watchlist</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="flex items-center gap-3 lg:gap-3">
+                            <img class="w-[1rem] lg:w-[1.5rem]" src="../images/star.png" alt="">
+                            <span>Favorites</span>
+                        </a>
+                    </li>
+                </ul>
+    
+                <div>
+                    <ul class="grid lg:gap-5">
+                        <li class="nav-item">
+                            <a href="#" class="flex items-center gap-3 lg:gap-3">
+                                <img class="w-[1rem] lg:w-[1.5rem]" src="../images/setting-2.png" alt="">
+                                <span>Settings</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="flex items-center gap-3 lg:gap-3">
+                                <img class="w-[1rem] lg:w-[1.5rem]" src="../images/sun.png" alt="">
+                                <span>Dark Mode</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!--Mobile Menu-->
+            <div id="mobile-menu" class="mobile-menu lg:hidden fixed top-0 z-50 bg-[#11172D]/90 bg-blend-overlay h-[100vh] w-[10rem] md:w-[13rem] text-white p-[1.5rem] transform">
+                <ul class="grid gap-y-[3rem] text-[0.8rem] md:text-[1rem]">
                     <li>
-                        <a href="#" class="flex gap-3">
-                            <img class="w-[1.8rem]" src="../images/setting-2.png" alt="">
+                        <a href="#" class="flex items-center gap-3">
+                            <img class="w-[1.2rem] md:w-[1.5rem]" src="../images/home.png" alt="">
+                            <span>Home</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="flex items-center gap-3">
+                            <img class="w-[1.2rem] md:w-[1.5rem]" src="../images/diagram.png" alt="">
+                            <span>Trending</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="flex items-center gap-3">
+                            <img class="w-[1.2rem] md:w-[1.5rem]" src="../images/folder-2.png" alt="">
+                            <span>Categories</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="flex items-center gap-3">
+                            <img class="w-[1.2rem] md:w-[1.5rem]" src="../images/clock.png" alt="">
+                            <span>Top Release</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="flex items-center gap-3">
+                            <img class="w-[1.2rem] md:w-[1.5rem]" src="../images/archive-minus.png" alt="">
+                            <span>Watchlist</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="flex items-center gap-3">
+                            <img class="w-[1.2rem] md:w-[1.5rem]" src="../images/star.png" alt="">
+                            <span>Favorites</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="flex items-center gap-3">
+                            <img class="w-[1.2rem] md:w-[1.5rem]" src="../images/setting-2.png" alt="">
                             <span>Settings</span>
                         </a>
                     </li>
                     <li>
-                        <a href="#" class="flex gap-3">
-                            <img class="w-[1.8rem]" src="../images/sun.png" alt="">
+                        <a href="#" class="flex items-center gap-3">
+                            <img class="w-[1.2rem] md:w-[1.5rem]" src="../images/sun.png" alt="">
                             <span>Dark Mode</span>
                         </a>
                     </li>
                 </ul>
             </div>
         </nav>
+        <div class="overlay" id="overlay"></div>
+       
     </header>
     <!--=================Header=================-->
 
     <!--=================Main=================-->
-    <main>
+    <main class="lg:ml-[4.6rem] mt-[2rem]">
+
+        <!---------------------TopHead--------------------->
+        <section class="text-white fixed right-0 left-0 lg:left-[3rem] top-[2rem] flex items-center justify-between mx-[1rem] lg:mx-[5rem]">
+            <a href="#">
+                <img class="w-[10rem]" src="../images/Logo.png" alt="">
+            </a>
+
+            <!-- Hamburger Icon (Mobile) -->
+            <button id="menu-toggle" class="menu-toggle lg:hidden">
+                <img id="menu-icon" class="w-[2rem]" src="../images/menu_24dp_FFF_FILL0_wght400_GRAD0_opsz24.png" alt="Menu">
+            </button>
+
+            <!--Desktop Extras-->
+            <div class="hidden lg:flex gap-2 items-center border-white border-2 py-2 px-3 rounded-lg md:w-[30%] lg:w-[40%] lg:h-[10%]">
+                <img src="../images/search-normal.png" alt="">
+                <input class="bg-transparent w-full" type="text" placeholder="Search">
+            </div>
+            <div class="hidden lg:flex items-center gap-4 ">
+                <a class="flex py-2 px-4 rounded-md bg-[#5A189A]" href="#">
+                    <img src="../images/profile-tick.png" alt="">
+                    <p>Sign In</p>
+                </a>
+                <select class="bg-[#11172D] py-2 px-4 rounded-md" name="language" id="language">
+                    <option value="1">EN</option>
+                    <option value="2">FR</option>
+                </select>
+            </div>
+        </section>
+
+
+        <!---------------------Hero Section--------------------->
+        <section class="w-full h-[20rem] md:h-[23rem] lg:h-[25rem] mt-[7rem] relative">
+            <div id="hero-content" class="w-full h-full relative">
+                <img class="w-full h-full object-cover transition ease-in-out blur-[1px]" id="hero-image" src="../images/captain-america-brave-new-world.jpg" alt="">
+
+                <div id="hero-info" class="w-[80vw] absolute grid gap-5 items-center top-[3.5rem] lg:left-[1.5rem] text-white text-left leading-8 md:leading-[3rem] lg:leading-[3rem] p-6">
+                    <h2 id="hero-title" class="text-[2rem] md:text-[3rem] lg:text-[3rem] font-light">Captain America <br><span class="font-bold">Brave New World</span></h2>
+                    <div class="grid justify-start content-between lg:w-[100vh] gap-[3rem]">
+                        <div class="flex gap-5">
+                            <div class="flex gap-2 items-center">
+                                <img class="w-[2rem] md:w-[2.4rem] lg:w-[2.4rem]" src="../images/IMDB_Logo_2016 1.png" alt="">
+                                <p class="text-[.7rem] md:text-sm lg:text-sm">7.8</p>
+                            </div>
+                            <div class="flex gap-2 items-center">
+                                <img class="w-[1.5rem] md:w-[2rem] lg:w-[2rem]" src="../images/UM.png" alt="">
+                                <p class="text-[.7rem] md:text-sm lg:text-sm">English</p>
+                            </div>
+                        </div>
+                        <div class="md:grid lg:grid grid-flow-col w-[86vw] justify-between content-center">
+                            <button class="bg-[#5A189A] px-7 rounded-md">Watch</button>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="hidden absolute right-[2rem] bottom-[3rem] md:flex lg:flex items-center gap-3">
+                <button id="prev-btn" class="bg-[#5A189A] rounded-full p-1"><img class="w-[.8rem]" src="../images/arrow-left.png" alt=""></button>
+                
+                <button class="thumb w-[5.5rem]" 
+                        data-title="Red One" 
+                        data-rating="7.0" 
+                        data-language="English" 
+                        data-img="../images/red-one-movie-.jpg">
+                        <img class="object-cover rounded-md" src="../images/red-one-movie-.jpg" alt="">
+                </button>
+                <button class="thumb w-[5.5rem]" 
+                        data-title="Captain America <br><span class='font-bold'>Brave New World</span>" 
+                        data-rating="7.8" 
+                        data-language="English" 
+                        data-img="../images/captain-america-brave-new-world.jpg">
+                        <img class="object-cover rounded-md" src="../images/captain-america-brave-new-world.jpg" alt="">
+                </button>
+                <button class="thumb w-[5.5rem]" 
+                        data-title="Sonic the Hedgehog 3" 
+                        data-rating="8.5" 
+                        data-language="English" 
+                        data-img="../images/sonic-3-movie.jpg">
+                        <img class="object-cover rounded-md" src="../images/sonic-3-movie.jpg" alt="">
+                </button>
+
+                <button id="next-btn" class="bg-[#5A189A] rounded-full p-1"><img class="w-[.8rem]" src="../images/arrow-right.png" alt=""></button>
+            </div>
+
+        </section>
+
+        <!---------------------Hero Section--------------------->
+
+
+        <!---------------------Trending Section--------------------->
+        <section>
+            
+        </section>
+
+
+
+
 
     </main>
     <!--=================Main=================-->
+
+    <script src="../javascript/index.js"></script>
 
 </body>
 </html>
